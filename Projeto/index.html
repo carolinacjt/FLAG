@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <!--<a class="active home" href="index.html">HOME</a>-->
+            <div class="active home">HOME</div>
+            <div class="inactive contactos">CONTACTOS</div>
+            <div class="search visivel">
+                <form>
+                    <input type="text" id="searchbar" placeholder="Search.." onkeyup="search_prato()">
+                </form>
+            </div>
+            <div class="inactive cart"><img src="data/carrinho2.webp" alt=""></div>
+        </nav>
+
+        <div class="contactos-secçao invisivel">
+            <div class="contactos_s grelha">
+                <form>
+                    <input class= "firstLastName" type="text" placeholder="Primeiro e Último Nome" required>
+                    <input class= "email" type="text" placeholder="E-mail" required>
+                    <button class="subscrever" type="submit">Subscrever</button>
+                </form>
+            </div>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.8846270053377!2d-8.425945084610282!3d40.21162927938947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f999fe3ec067%3A0xd97fce58ea1626d8!2sJustsushi%20Coimbra!5e0!3m2!1spt-PT!2spt!4v1678703552106!5m2!1spt-PT!2spt" allowfullscreen="" loading="lazy" ></iframe>"
+            </div>
+        </div>
+        <div class="produto-secçao invisivel">
+            <div class="product first_product">
+                <div class="product-info">
+                    <img class="product_info_img" src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/6452a84d00e98528a21881045ba08b8d8ecf1f8f.jpeg" alt="">
+                </div>
+                <div class="nome_produto">
+                    <h2 class="nome_produto_h2">Sopa Miso</h2>
+                </div>
+                <div class="preço_produto">
+                    <h3>3.50€</h3>
+                </div>
+                <div class="descriçao_produto">
+                    <h4>Sopa Miso guarnecida com salmão, cebolinho e alho francês</h4>
+                </div>
+                <p id="confirm"></p>
+                <div class=form_check>
+                    <input type="checkbox" class="checkPequeno picante" id="picante" name="picante" value="Picante">
+                    <label for="picante"> Com molho picante</label><br>
+                    <input type="checkbox" class="checkPequeno nao_picante" id="nao_picante" name="nao_picante" value="NotPicante">
+                    <label for="nao_picante"> Sem molho picante</label><br><br>
+                    <button id="agreed" class="checkGrande">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-info">
+                    <img class="product_info_img" src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/c8f6b5bc1106822fbcb18aa48a98537bb6223f8b.jpeg" alt="">
+                </div>
+                <div class="nome_produto">
+                    <h2 class="nome_produto_h2">Gyosas</h2>
+                </div>
+                <div class="preço_produto">
+                    <h3>4.50€</h3>
+                </div>
+                <div class="descriçao_produto">
+                    <h4>4 unidades - Estaladiças Gyosas servidas com molho teryaki e sementes de sésamo</h4>
+                </div>
+                <p id="confirm"></p>
+                <div class=form_check>
+                    <input type="checkbox" class="checkPequeno" id="picante" name="picante" value="Picante">
+                    <label for="picante"> Vegetarianas</label><br>
+                    <input type="checkbox" class="checkPequeno" id="nao_picante" name="nao_picante" value="NotPicante">
+                    <label for="nao_picante"> Frango</label><br><br>
+                    <button id="agreed" class="checkGrande">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-info">
+                    <img class="product_info_img" src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/21ce0a9e2a1b04bae5b5f1db9c7c01bba5fdfae8.jpeg" alt="">
+                </div>
+                <div class="nome_produto">
+                    <h2 class="nome_produto_h2">Ceviche de  Salmão</h2>
+                </div>
+                <div class="preço_produto">
+                    <h3>6.50€</h3>
+                </div>
+                <div class="descriçao_produto">
+                    <h4>Cubos de Salmão fresco servido com manga e aromatizado com coentros</h4>
+                </div>
+                <p id="confirm"></p>
+                <div class=form_check>
+                    <input type="checkbox" class="checkPequeno" id="picante" name="picante" value="Picante">
+                    <label for="picante"> Com fruta</label><br>
+                    <input type="checkbox" class="checkPequeno" id="nao_picante" name="nao_picante" value="NotPicante">
+                    <label for="nao_picante"> Sem fruta</label><br><br>
+                    <button id="agreed" class="checkGrande">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-info">
+                    <img class="product_info_img" src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/0c06753d3d8e3750c12e176ba3052e2458eaba1f.jpeg" alt="">
+                </div>
+                <div class="nome_produto">
+                    <h2 class="nome_produto_h2">Sashimi</h2>
+                </div>
+                <div class="preço_produto">
+                    <h3>10.50€</h3>
+                </div>
+                <div class="descriçao_produto">
+                    <h4>15 peças de peixe laminado</h4>
+                </div>
+                <p id="confirm"></p>
+                <div class=form_check>
+                    <input type="checkbox" class="checkPequeno" id="picante" name="picante" value="Picante">
+                    <label for="picante"> Mix de peixes</label><br>
+                    <input type="checkbox" class="checkPequeno" id="nao_picante" name="nao_picante" value="NotPicante">
+                    <label for="nao_picante"> Apenas salmão</label><br><br>
+                    <button id="agreed" class="checkGrande">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-info">
+                    <img class="product_info_img" src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/246d5225500d02be7ead5d96d1ca72d56ca5d8ad.jpeg" alt="">
+                </div>
+                <div class="nome_produto">
+                    <h2 class="nome_produto_h2">Nigiri</h2>
+                </div>
+                <div class="preço_produto">
+                    <h3>8.50€</h3>
+                </div>
+                <div class="descriçao_produto">
+                    <h4>9 unidades - 3 de Salmão, 3 de Peixe Branco e 3 Atum</h4>
+                </div>
+                <p id="confirm"></p>
+                <div class=form_check>
+                    <input type="checkbox" class="checkPequeno" id="picante" name="picante" value="Picante">
+                    <label for="picante"> Mix de peixes</label><br>
+                    <input type="checkbox" class="checkPequeno" id="nao_picante" name="nao_picante" value="NotPicante">
+                    <label for="nao_picante"> Apenas salmão</label><br><br>
+                    <button id="agreed" class="checkGrande">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-info">
+                    <img class="product_info_img" src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/fd1118b27a983e5e19d999a9dccf30ec973148ae.jpeg" alt="">
+                </div>
+                <div class="nome_produto">
+                    <h2 class="nome_produto_h2">Chef Maki</h2>
+                </div>
+                <div class="preço_produto">
+                    <h3>5.50€</h3>
+                </div>
+                <div class="descriçao_produto">
+                    <h4>8 unidades - urumaki de abacate, salmão, maionese japonesa e cebolinho</h4> 
+                </div>
+                <p id="confirm"></p>
+                <div class=form_check>
+                    <input type="checkbox" class="checkPequeno" id="picante" name="picante" value="Picante">
+                    <label for="picante"> Com wasabi</label><br>
+                    <input type="checkbox" class="checkPequeno" id="nao_picante" name="nao_picante" value="NotPicante">
+                    <label for="nao_picante"> Sem wasabi</label><br><br>
+                    <button id="agreed" class="checkGrande">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carrinho-secçao invisivel">
+            <div class="carrinho">
+                <div class="tituloCarrinho grelha">
+                    <h2>Carrinho</h2>
+                </div>
+                <div class="itemsCarrinho">
+                   <!-- <div class="linhaCarrinho grelha">
+                        <img src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/6452a84d00e98528a21881045ba08b8d8ecf1f8f.jpeg" alt="" width="200px">
+                        <h3 class="nome_prato_carrinho">Sopa Miso</h3>
+                        <h3 class="preco">3.50€</h3>
+                        <input class="quantidade" type="number" value="1">
+                        <button class="remover" type="button">REMOVER</button>
+                    </div>
+                    <div class="linhaCarrinho grelha">
+                        <img src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/0c06753d3d8e3750c12e176ba3052e2458eaba1f.jpeg" alt="" width="200px">
+                        <h3 class="nome_prato_carrinho">Sashimi</h3>
+                        <h3 class="preco">10.50€</h3>
+                        <input class="quantidade" type="number" value="2">
+                        <button class="remover" type="button">REMOVER</button>
+                    </div> -->
+                </div>
+                <div class="linha grelha">
+                    <span>------------------------------------------------</span>
+                </div>
+                <div class="total grelha">
+                    <h4  class="total_texto">Total: 0€</h4>
+                </div>
+                <div class="comprar grelha">
+                    <button class="comprar_btn" type="button">Finalizar compra</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="catalogo-secçao visivel">
+            <ul class="catalogo">
+                <li class="catalogo-card">
+                    <div class="photo">
+                        <img src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/6452a84d00e98528a21881045ba08b8d8ecf1f8f.jpeg" alt="" width="300px">
+                    </div>               
+                    <p class="nome_prato_escondido">Sopa Miso</p>
+                    <div class="prato_info visivel">
+                        <h2 class="nome_prato">Sopa Miso</h2>
+                    </div>
+                    <h3 class="preço_prato">3.50€</h3>
+                </li>
+                <li class="catalogo-card">
+                    <div class="photo">
+                        <img src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/c8f6b5bc1106822fbcb18aa48a98537bb6223f8b.jpeg" alt="" width="300px">
+                    </div>
+                    <p class="nome_prato_escondido">Gyosas</p>
+                    <div class="prato_info visivel">
+                        <h2 class="nome_prato">Gyosas</h2>
+                    </div>
+                    <h3 class="preço_prato">4.50€</h3>
+                </li>
+                <li class="catalogo-card">
+                    <div class="photo">
+                        <img src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/21ce0a9e2a1b04bae5b5f1db9c7c01bba5fdfae8.jpeg" alt="" width="300px">
+                    </div>
+                    <p class="nome_prato_escondido">Ceviche de Salmão</p>
+                    <div class="prato_info visivel">
+                        <h2 class="nome_prato">Ceviche de Salmão</h2> 
+                    </div>
+                    <h3 class="preço_prato">6.50€</h3>
+                </li>
+                <li class="catalogo-card">
+                    <div class="photo">
+                        <img src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/0c06753d3d8e3750c12e176ba3052e2458eaba1f.jpeg" alt="" width="300px">
+                    </div>
+                    <p class="nome_prato_escondido">Sashimi</p>
+                    <h2 class="nome_prato">Sashimi</h2>
+                    <h3 class="preço_prato">10.50€</h3>
+                </li>
+                <li class="catalogo-card">
+                    <div class="photo">
+                        <img src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/246d5225500d02be7ead5d96d1ca72d56ca5d8ad.jpeg" alt="" width="300px">
+                    </div>
+                    <p class="nome_prato_escondido">Nigiri</p>
+                    <h2 class="nome_prato">Nigiri</h2>
+                    <h3 class="preço_prato">8.50€</h3>
+                </li>
+                <li class="catalogo-card">
+                    <div class="photo">
+                        <img src="https://justsushi.go41.outdare.pt//tenantUploads/3/images/fd1118b27a983e5e19d999a9dccf30ec973148ae.jpeg" alt="" width="300px">
+                    </div>
+                    <p class="nome_prato_escondido">Chef Maki</p>
+                    <h2 class="nome_prato">Chef Maki</h2>
+                    <h3 class="preço_prato">5.50€</h3>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+<script async src="search.js"></script>
+</body>
+</html>

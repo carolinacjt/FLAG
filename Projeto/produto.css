@@ -1,0 +1,288 @@
+body{ /*nao*/
+    margin: 0;
+}
+
+body, html{ /*nao*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*, *:before, *:after { /*nao*/
+    box-sizing: inherit;
+  }
+
+a{ /*nao*/
+    text-decoration: none;
+    color: black;
+}
+
+p.p_voltar{ /*nao*/
+    text-align: center;
+    font-size: 1.7vw;
+    padding: 1vw 0 1vw 0;
+    margin-left: 2vw;
+    border-radius: 1.2vw;
+}
+
+h2{ /*nao*/
+    margin: auto;
+    font-size:3.8vw;
+}
+h3{ /*nao*/
+    margin: auto;
+    font-size: 3vw;
+}
+h4{ /*nao*/
+    margin: auto;
+    font-size: 2vw;
+}
+
+p.p_voltar:hover{ /*nao*/
+    color: white;
+    border: 0px solid black;
+    background-color: black;
+}
+
+.photo>img{ /*nao*/
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.product-info>img{ /*sim*/
+    width: 100%;
+    object-fit: cover;
+    
+}
+.product-info{ /*sim*/
+    grid-area: photo;
+    margin: 0;
+}
+
+.photo{ /*nao*/
+    grid-area: photo;
+    margin: 0;
+}
+
+.form_check{ /*sim*/
+    text-align: left;
+    margin-left: 2vw;
+    font-size: 1.8vw;
+}
+
+input.checkPequeno{ /*sim*/
+    width: 2vw;
+    height: 2vw;
+}
+
+button.checkGrande{ /*sim*/
+    font-size: 1.7vw;
+    padding: 1vw;
+    border-radius: 1.2vw;
+}
+
+button.checkGrande:hover{ /*sim*/
+    color: white;
+    background-color: black;
+}
+
+
+.photo2{ /*nao*/
+    background-image: url('https://justsushi.go41.outdare.pt//tenantUploads/3/images/6452a84d00e98528a21881045ba08b8d8ecf1f8f.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    grid-area: 2 / 1 / 3 / 6;
+}
+
+.product{ /*sim*/
+    display: grid;
+    grid-gap: 2vw;
+    height: 100vh;
+    width: 100%;
+}
+/*.photo{
+   grid-area: photo;
+  /* grid-area: 1 / 2 / 2 / 9;*/
+  /*grid-column: 2/span 3;
+ /* width: auto;*/
+
+/*} 
+.photo>img{
+    object-fit: cover; 
+    width: 100%;
+    
+}
+*/
+/*grid-area: 1 / 2 / 4 / 6;*/
+
+
+@media only screen and (max-width:1500px){
+    .seta_imagem{ /*nao*/
+        display: none;
+    }
+    .seta_palavra{ /*nao*/
+        display: block;
+    }
+
+    .product{
+        grid-template-columns: 8vw repeat(3, 1fr) 20vw 15vw;
+        grid-template-rows: 5vw 5vw 6vw 15vw 8vw;
+        grid-gap: 1.4vw;
+    }
+
+    .product-info{
+        grid-area: 1 / 2 / 5 / 5;
+    }
+    h2, h3{
+        font-size: 2.8vw;
+    }
+    h4{
+        font-size: 1.7vw;
+    }
+
+    .goBack{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .preço{
+        grid-area: 2 / 6 / 3 / 7;
+        text-align: right;
+        margin-right: 1vw;
+    }
+    .nome{
+        grid-area: 2 / 5 / 3 / 7;
+    }
+    .descriçao{
+        grid-area: 3 / 5 / 4 / 7;
+    }
+    .seta_imagem{
+        grid-area: 1 / 1 / 2 / 2;   
+    }
+    .form_check{
+        margin-top: auto;
+        margin-bottom: 0;
+        margin-left: 0;
+        font-size: 1.5vw;
+        grid-area: 4 / 5 / 5 / 6;
+    }
+    button.checkGrande{
+        font-size: 1.35vw;
+        font-weight:bold;
+    }
+    input.checkPequeno{
+        width: 1.5vw;
+    }
+    p#confirm{
+        grid-area: 5 / 5 / 6 / 7;
+        font-size: 1.5vw;
+        margin-top: 0.5vw;
+    }
+    
+}
+
+@media only screen and (max-width:800px){
+
+    .seta_imagem{
+        display: none;
+    }
+    .seta_palavra{
+        display: block;
+    }
+
+    .product{
+        grid-template-columns: 10vw repeat(3, 1fr) 30vw;
+        grid-template-rows: 38vw 5vw 8vw;
+    }
+
+    .product-info{
+        grid-area: 1 / 2 / 2 / 5;
+    }
+    .goBack{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .preço{
+        grid-area: 2 / 4 / 3 / 5;
+        text-align: right;
+    }
+    .nome{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .descriçao{
+        grid-area: 3 / 2 / 4 / 5;
+    }
+    .seta_imagem{
+        grid-area: 1 / 1 / 2 / 2;   
+    }
+    .form_check{
+        margin-top: auto;
+        margin-bottom: 0;
+        grid-area: 1 / 5 / 2 / 6;
+    }
+    p#confirm{
+        grid-area: 2 / 5 / 3 / 6;
+        font-size: 1.5vw;
+        margin-top: 0.5vw;
+    }
+}
+
+@media only screen and (max-width:500px){
+    h2, h3{
+        font-size: 3vw;
+    }
+    h4{
+        font-size: 2vw;
+    }
+    .seta_palavra{
+        display: none;
+    }
+
+    .seta_imagem{
+        display: block;
+        margin: 4vw auto 0 auto;
+    }
+
+    .product{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 20vw 67vw 5vw 5vw 13vw;
+        grid-gap: 1.5vw;
+    }
+
+    .product-info{
+       /* grid-area: 2 / 1 / 3 / 6;*/
+        grid-row:2/4;
+        grid-column: 1/6;
+    }
+    .goBack{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .preço{
+        grid-area: 3 / 5 / 4 / 6;
+        text-align: right;
+        margin-right: 3vw;
+    }
+    .nome{
+        grid-area: 3 / 1 / 4 / 3;
+        margin-left: 3vw;
+    }
+    .descriçao{
+        grid-area: 4 / 1 / 5 / 5;
+        margin-left: 3vw;
+    }
+    .seta_imagem{
+        grid-area: 1 / 1 / 2 / 2;   
+    }
+    .form_check{
+        grid-row: 5/6;
+        grid-column: 1/3;
+        margin-top: 0;
+        margin-left: 1.5vw;
+    }
+    p#confirm{
+        grid-area: 6 / 1 / 7 / 3;
+        font-size: 1.5vw;
+        margin-left: 2vw;
+        margin-top: 0;
+    }
+    
+}
